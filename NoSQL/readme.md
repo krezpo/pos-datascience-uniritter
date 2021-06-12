@@ -1,0 +1,13 @@
+# Solução _NoSQL_ aplicada em Industria Automotiva
+
+A industria automotiva em questão gera um grande volume de dados. Esses dados são provenientes não somente dos seus sensores dispostos na planta industrial, mas também são gerados pela interação de seus colaboradores na rede social interna da companhia. Esse grande volume de informações é composto por uma diversidade de tipos de dados e necessita ser armazenado com segurança e integridade, focando em baixo-custo operacional e de manutenção.
+
+O time de tecnologia de nossa industria automotiva, com o objetivo de armazenar o grande volume de dados e atender a necessidade da empresa, arquitetou uma solução composta de diversos tipos de bancos de dados _NoSQL_ (_Not Only Structured Query Language_). Tal solução se baseia em um banco chave-valor (_MongoDB_), um banco em grafo (_Neo4j_), e um banco de dados temporais (_Prometheus_). Abaixo segue uma breve explicação sobre a adoção e responsabilidade de cada banco em nossa solução:
+
+- **_MongoDB_**: Este banco chave-valor será responsável por armazenar informações sobre os colaboradores da companhia, assim como as interações dos mesmos na rede social interna empresa. Além disso, neste banco também serão armazenadas especificações dos sensores espalhados pela planta industrial. A flexibilidade das _collections_ do _MongoDB_ facilita a inserção de dados conforme a necessidade. Além disso, sua escalabilidade horizontal é interessante para a quantidade de dados que podem ser gerados pelos colaboradores;
+    
+- **_Prometheus_**: Banco amplamente utilizado por grandes corporações, em nossa arquitetura, o _Prometheus_ será responsável por armazenar os dados temporais dos sensores dispostos na planta de nossa industria automotiva. Uma das vantagens deste banco é o armazenamento eficiente dos dados, além das diversas possibilidades de gráficos que podem ser gerados com os dados;
+    
+- **_Neo4j_**: Banco de dados baseado em grafos, o _Neo4j_ será responsável por armazenar os relacionamentos entre os colaboradores de nossa industria automotiva, além dos relacionamentos entre os sensores e máquina da companhia. Este banco é flexível e escalável, além de ser compatível com a _ACID_ (Atomicidade, Consistência, Isolamento e Durabilidade).
+
+Como pudemos analisar, cada banco possui sua devida responsabilidade, que vai de encontro com a especialidade de cada solução. O time de tecnologia acredita que o emprego dessa solução com persistência poliglota irá atender as necessidades de nossa industria automotiva. Além disso, o custo com armazenamento de informações será baixo, mantendo a segurança e integridade das informações, como solicitado por nossa industria automotiva.
